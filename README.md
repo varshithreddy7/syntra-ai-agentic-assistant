@@ -276,6 +276,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-**Built with ❤️ by [Your Name]**
+**Built with ❤️ by Varshith Reddy**
 
 *Showcasing modern AI application development with production-ready architecture and real-world tool integration.*
