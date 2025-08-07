@@ -250,10 +250,6 @@ The application automatically adapts to different environments:
 - Tool integration best practices
 - Production-ready authentication setup
 
-## 🤝 Contributing
-
-Contributions are welcome! Please read our contributing guidelines before submitting PRs.
-
 ### Development Workflow
 
 1. Fork the repository
