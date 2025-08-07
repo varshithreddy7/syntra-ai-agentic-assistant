@@ -27,8 +27,8 @@ async function ChatPage({ params }: ChatPageProps) {
         <ChatInterface chatId={chatId} initialMessages={initialMessages}/>
       </div>
     )
-  } catch (e) {
-    console.error("Error while loading chats:");
+  } catch (error) {
+    console.error("Error while loading chats:", error);
     redirect("/dashboard");
   }
 

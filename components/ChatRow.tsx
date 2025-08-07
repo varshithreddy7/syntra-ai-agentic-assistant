@@ -4,7 +4,6 @@ import { TrashIcon } from "@radix-ui/react-icons";
 import { useRouter } from "next/navigation";
 import { use } from "react";
 import { Button } from "./ui/button";
-import { getLastMessage } from "@/convex/messages";
 import { useQuery } from "convex/react";
 import { api } from "@/convex/_generated/api";
 import TimeAgo from "react-timeago"
@@ -22,7 +21,7 @@ function ChatRow({
   })
   const handleClick=()=>{
     router.push(`/dashboard/chat/${chat._id}`);
-    closeMobileNav;
+    closeMobileNav();
   };
   return(
     <div className="group rounded-xl border border-gray-200/30 bg-white/50 backdrop-blur-sm hover:bg-white/80 transition-all duration-200 cursor-pointer shadow-sm hover:shadow-md"

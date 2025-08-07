@@ -1,14 +1,10 @@
 import { api } from "@/convex/_generated/api";
-import { send } from "@/convex/messages";
 import { getConvexClient } from "@/lib/convex";
 import { submitQuestion } from "@/lib/langgraph";
 import { ChatRequestBody, SSE_DATA_PREFIX, SSE_LINE_DELIMITER, StreamMessage, StreamMessageType } from "@/lib/types";
-import { auth, Token } from "@clerk/nextjs/server";
-import { AIMessage, HumanMessage, ToolMessage } from "@langchain/core/messages";
-import { Tool } from "@langchain/core/tools";
-import { sendError } from "next/dist/server/api-utils";
+import { auth } from "@clerk/nextjs/server";
+import { AIMessage, HumanMessage } from "@langchain/core/messages";
 import { NextResponse } from "next/server";
-import { text } from "stream/consumers";
 import { WritableStreamDefaultWriter } from "stream/web";
 
 function sendSSEMessage(

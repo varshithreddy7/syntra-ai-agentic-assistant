@@ -39,12 +39,13 @@ function DashboardPage() {
       router.push(`/dashboard/chat/${chatId}`);
     } catch (error) {
       console.error('Error creating new chat:', error);
+      const errorObj = error instanceof Error ? error : new Error(String(error));
       console.error('Error details:', {
-        message: error.message,
-        name: error.name,
-        stack: error.stack
+        message: errorObj.message,
+        name: errorObj.name,
+        stack: errorObj.stack
       });
-      alert(`Failed to create new chat: ${error.message || 'Unknown error'}. Please try again.`);
+      alert(`Failed to create new chat: ${errorObj.message || 'Unknown error'}. Please try again.`);
     } finally {
       setIsCreatingChat(false);
     }
@@ -66,7 +67,7 @@ function DashboardPage() {
 
           {/* Title */}
           <h1 className="text-2xl font-semibold text-gray-900 mb-2">
-            Welcome to Your AI Agent Dashboard
+            Welcome to Syntra an AI Agentic Assistant
           </h1>
 
           {/* Subtitle */}

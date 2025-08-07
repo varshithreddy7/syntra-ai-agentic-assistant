@@ -3,7 +3,6 @@ import { SignedIn, SignedOut, SignInButton } from "@clerk/nextjs";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import { title } from "node:process";
 import { useState } from "react";
 import DynamicFavicon from "@/components/DynamicFavicon";
 

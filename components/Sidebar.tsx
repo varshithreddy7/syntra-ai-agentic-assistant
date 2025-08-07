@@ -2,10 +2,10 @@
 import { NavigationContext } from '@/lib/NavigationProvider';
 import { cn } from '@/lib/utils';
 import { useRouter } from 'next/navigation'
-import React, { use,useContext, useState } from 'react'
+import React, { use, useState } from 'react'
 import { Button } from './ui/button';
 import { PlusIcon } from '@radix-ui/react-icons';
-import { useMutation, useQueries, useQuery } from 'convex/react';
+import { useMutation, useQuery } from 'convex/react';
 import { api } from '@/convex/_generated/api';
 import { Id } from '@/convex/_generated/dataModel';
 import ChatRow from './ChatRow';
@@ -19,9 +19,6 @@ export default function Sidebar() {
   const chats = useQuery(api.chats.listChats)
   const createChat = useMutation(api.chats.createChat);
   const deleteChat = useMutation(api.chats.deleteChat);
-  const handleClick = ()=>{
-    closeMobileNav();
-  }
 
   const handleNewChat = async ()=>{
     const chatId = await createChat({title:"New Chat"});

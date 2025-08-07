@@ -51,13 +51,13 @@ export interface DoneMessage extends BaseStreamMessage{
 export interface ToolStartMessage extends BaseStreamMessage{
   type: StreamMessageType.ToolStart;
   tool: string;
-  input: any;
+  input: unknown;
 }
 
 export interface ToolEndMessage extends BaseStreamMessage{
   type: StreamMessageType.ToolEnd;
   tool: string;
-  output: any;
+  output: unknown;
 }
 
 export type StreamMessage=
