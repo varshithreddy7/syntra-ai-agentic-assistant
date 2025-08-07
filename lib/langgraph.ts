@@ -16,12 +16,29 @@ const trimmer = trimMessages({
   allowPartial: false,
   startOn: "human"
 })
-const toolClient = new wxflows({
-  endpoint: process.env.WXFLOWS_ENDPOINT || "",
-  apikey: process.env.WXFLOWS_APIKEY,
-})
+// Initialize wxflows client only if endpoint is provided
+const initializeTools = async () => {
+  const endpoint = process.env.WXFLOWS_ENDPOINT;
+  const apikey = process.env.WXFLOWS_APIKEY;
+  
+  if (!endpoint || !apikey) {
+    console.warn('WXFLOWS_ENDPOINT or WXFLOWS_APIKEY not provided. Tools will be disabled.');
+    return [];
+  }
+  
+  try {
+    const toolClient = new wxflows({
+      endpoint,
+      apikey,
+    });
+    return await toolClient.lcTools;
+  } catch (error) {
+    console.error('Failed to initialize wxflows tools:', error);
+    return [];
+  }
+};
 
-const tools = await toolClient.lcTools;
+const tools = await initializeTools();
 const toolNode = new ToolNode(tools)
 const initialisedModel = () => {
   const model = new ChatAnthropic({
