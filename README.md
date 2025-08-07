@@ -6,7 +6,7 @@
 
 ## 🌟 Project Overview
 
-Syntra AI is a sophisticated conversational AI assistant that I developed to demonstrate advanced AI integration patterns and modern web development practices. Unlike traditional chatbots, Syntra is an **agentic system** that can reason, plan, and execute complex tasks using multiple specialized tools in real-time.
+Syntra AI is a sophisticated conversational AI Agentic assistant which use some tools to do the agentic tasks, that I developed to demonstrate advanced AI integration patterns and modern web development practices. Unlike traditional chatbots, Syntra is an **agentic system** that can reason, plan, and execute complex tasks using multiple specialized tools in real-time.
 
 The system leverages Claude 3.5 Sonnet's advanced reasoning capabilities combined with IBM's WXFlows tool ecosystem to provide users with access to live data from Wikipedia, YouTube, Google Books, mathematical calculations, currency conversion, and more. Every interaction is powered by intelligent agent workflows that determine when and how to use these tools effectively.
 
@@ -262,10 +262,6 @@ Contributions are welcome! Please read our contributing guidelines before submit
 4. Test thoroughly across different scenarios
 5. Submit a pull request with detailed description
 
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ## 🌟 Acknowledgments
 
 - **Anthropic** for Claude 3.5 Sonnet API
@@ -276,6 +272,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-**Built with ❤️ by Varshith Reddy**
+**Built with Passion in AI Integration into Web Applications to automate workflows through just prompts -by Varshith Reddy**
 
 *Showcasing modern AI application development with production-ready architecture and real-world tool integration.*
